@@ -1,7 +1,7 @@
-# Aplicação Lista de Tarefas (To-Do List)
+# Lista de Tarefas (To-Do List)
 
 
-Esta aplicação foi criada com foco no aprendizado de conceitos fundamentais do desenvolvimento de software para a web, a partir do terceiro e último desafio da Imersão em Engenharia de Software com IA promovida pela Alura! 
+Esta aplicação foi criada com foco no aprendizado de conceitos fundamentais do desenvolvimento de software para a web, a partir do terceiro e último desafio da Imersão em Engenharia de Software com IA promovida pela Alura, utilizando o Google Antigravity. 
 
 Particularmente gostei muito desse projeto, não vivo sem agenda e checklists, faz parte do meu dia a dia e nunca tinha pensado em fazer um projeto nesse sentido.
 
@@ -63,7 +63,7 @@ Não é necessário instalar nenhum programa extra, Node.js ou servidor local.
 
 ---
 
-### Outras possibilidades de desafios para praticar: 
+Outras possibilidades de desafios para praticar: 
 
 Tente fazer estas pequenas melhorias/ajustes:
 
@@ -72,7 +72,7 @@ Tente fazer estas pequenas melhorias/ajustes:
 3. **Data/Hora:** adicione o dia e horário em que a tarefa foi criada logo abaixo do texto dela.
 
 
-### 🛠️ Tecnologias e Ferramentas
+### Tecnologias e Ferramentas
 
 * **HTML5:** Estruturação semântica da página.
 * **CSS3:** Estilização moderna e transições visuais fluidas.
@@ -80,7 +80,10 @@ Tente fazer estas pequenas melhorias/ajustes:
 * **Google Antigravity:** Ferramenta auxiliar de desenvolvimento.
 
 
+
 ### Autor:
 
-Desenvolvido por Beca Guimas :))
+Desenvolvido por Beca Guimas :)
+Me encontre no [LinkedIn](https://www.linkedin.com/in/becaguimas). 
+
 
