@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Lista de Tarefas</title>
+  <!-- Conexão com a folha de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Container principal que centraliza o conteúdo na tela -->
+  <main class="app-container">
+    <header class="app-header">
+      <h1>Minhas Tarefas</h1>
+      <p class="subtitulo">Organize o seu dia a dia com facilidade</p>
+    </header>
+
+    <!-- Área de entrada: onde o usuário digita uma nova tarefa -->
+    <section class="input-section">
+      <input 
+        type="text" 
+        id="tarefa-input" 
+        placeholder="O que você precisa fazer hoje?" 
+        autocomplete="off"
+      >
+      <button id="adicionar-btn">Adicionar</button>
+    </section>
+
+    <!-- Resumo de status da lista -->
+    <section class="status-section">
+      <span id="contador-tarefas">0 tarefas no total</span>
+    </section>
+
+    <!-- A lista onde as tarefas adicionadas vão aparecer dinamicamente -->
+    <ul id="lista-tarefas" class="tarefas-lista">
+      <!-- Os itens <li> serão inseridos aqui pelo JavaScript -->
+    </ul>
+  </main>
+
+  <!-- Conexão com a lógica em JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

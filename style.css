@@ -1,0 +1,228 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET BÁSICO
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+/* ==========================================================================
+   2. CONTAINER PRINCIPAL (CARD)
+   ========================================================================== */
+.app-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.app-header .subtitulo {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   3. FORMULÁRIO DE ENTRADA (INPUT E BOTÃO)
+   ========================================================================== */
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#tarefa-input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#tarefa-input:focus {
+  border-color: #4f46e5; /* Roxo moderno */
+}
+
+#adicionar-btn {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#adicionar-btn:hover {
+  background-color: #4338ca;
+}
+
+#adicionar-btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   4. SEÇÃO DE STATUS (CONTADOR)
+   ========================================================================== */
+.status-section {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   5. ITENS DA LISTA DE TAREFAS
+   ========================================================================== */
+.tarefas-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #4f46e5; /* Borda lateral azul/índigo para PENDENTE */
+  transition: all 0.25s ease;
+}
+
+.tarefa-item:hover {
+  border-color: #cbd5e1;
+  border-left-color: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Área esquerda do item: checkbox, texto e badge */
+.tarefa-lado-esquerdo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.tarefa-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tarefa-conteudo input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4f46e5;
+  transition: transform 0.2s ease;
+}
+
+.tarefa-conteudo input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.tarefa-texto {
+  font-size: 1rem;
+  color: #1e293b;
+  word-break: break-word;
+  transition: all 0.2s ease;
+}
+
+/* ==========================================================================
+   6. ETIQUETAS DE STATUS (BADGES)
+   ========================================================================== */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  user-select: none;
+}
+
+.badge-pendente {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-concluida {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* ==========================================================================
+   7. ESTILO VISUAL DE TAREFA CONCLUÍDA
+   ========================================================================== */
+.tarefa-item.concluida {
+  background-color: #f0fdf4; /* Fundo suavemente esverdeado */
+  border-color: #bbf7d0;
+  border-left: 5px solid #10b981; /* Borda lateral verde para CONCLUÍDA */
+}
+
+.tarefa-item.concluida:hover {
+  border-left-color: #059669;
+}
+
+.tarefa-item.concluida .tarefa-texto {
+  text-decoration: line-through;
+  color: #64748b;
+  font-style: italic;
+}
+
+.tarefa-item.concluida input[type="checkbox"] {
+  accent-color: #10b981; /* O check marcado assume a cor verde */
+}
+
+/* Botão de remover */
+.remover-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444; /* Vermelho suave */
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.remover-btn:hover {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
