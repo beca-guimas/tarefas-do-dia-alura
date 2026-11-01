@@ -63,16 +63,32 @@ Não é necessário instalar nenhum programa extra, Node.js ou servidor local.
 
 ---
 
-Outras possibilidades de desafios para praticar: 
 
-Tente fazer estas pequenas melhorias/ajustes:
+Após o prompt inicial, não fiquei tão satisfeito e solicitei alterações, informando ao Google Antigravity que queria que as tarefas concluídas apareçam visualmente diferentes das pendentes:
+
+
+### Evolução Visual (Tarefas Pendentes vs. Concluídas)
+
+Foi implementada uma melhoria visual para diferenciar claramente o estado de cada atividade. Quando uma tarefa é concluída, as seguintes modificações ocorrem em tempo real na interface:
+
+| Elemento | Tarefa Pendente | Tarefa Concluída |
+| :--- | :--- | :--- |
+| **Borda lateral esquerda** | Azul/Índigo (`#4f46e5`) | Verde Esmeralda (`#10b981`) |
+| **Etiqueta (Badge)** | Azul claro escrito "Pendente" | Verde claro escrito "✓ Concluída" |
+| **Fundo do cartão** | Branco (`#ffffff`) | Verde sutil/menta (`#f0fdf4`) |
+| **Texto da tarefa** | Preto/Azul escuro legível | Riscado (*line-through*), atenuado e em itálico |
+| **Checkbox** | Roxo/Azul quando em foco | Verde quando ticado |
+
+
+
+Outras possibilidades de pequenas melhorias/ajustes:
 
 1. **Mudar as cores:** abra `style.css` e altere `#4f46e5` para sua cor favorita.
 2. **Botão de limpar tudo:** adicione um botão no HTML e uma função no JavaScript para remover todas as tarefas de uma vez.
 3. **Data/Hora:** adicione o dia e horário em que a tarefa foi criada logo abaixo do texto dela.
 
 
-### Tecnologias e Ferramentas
+### Tecnologias e Ferramentas utilizadas:
 
 * **HTML5:** Estruturação semântica da página.
 * **CSS3:** Estilização moderna e transições visuais fluidas.
